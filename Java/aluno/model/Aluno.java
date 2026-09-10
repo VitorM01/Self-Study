@@ -1,5 +1,4 @@
 package model;
-import model.Ra;
 public class Aluno{
     
     String nome;
@@ -12,7 +11,7 @@ public class Aluno{
         this.idade = idade;
     }
 
-    public String getNome() {
+	public String getNome() {
         return nome;
     }
     public void setNome(String nome) {

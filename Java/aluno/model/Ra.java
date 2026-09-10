@@ -1,12 +1,13 @@
 package model;
+import java.time.LocalDate;
 
 public class Ra {
     int numero;
-    int anoFeito;
+    LocalDate anoFeito;
 
-    public Ra(int numero, int anoFeito){
+    public Ra(int numero, LocalDate anoFeito){
         this.numero = numero;
-        this.anoFeito = anoFeito;
+        this.anoFeito = LocalDate.now();
     }
 
     public int getNumero() {
@@ -15,10 +16,10 @@ public class Ra {
     public void setNumero(int numero) {
         this.numero = numero;
     }
-    public int getAnoFeito() {
+    public LocalDate getAnoFeito() {
         return anoFeito;
     }
-    public void setAnoFeito(int anoFeito) {
+    public void setAnoFeito(LocalDate anoFeito) {
         this.anoFeito = anoFeito;
     }
     
