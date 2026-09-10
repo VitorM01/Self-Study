@@ -6,6 +6,36 @@ import java.time.LocalDate;
 public class View{
 Scanner sc = new Scanner(System.in);
 
+public void menu(){
+    View view = new View();
+
+    int i = 0;
+    while(i == 0){
+        System.out.print("\033[H\033[2J");
+        System.out.print("Escolha uma opcao:\n1 - Criar/Salvar Aluno\n0 - Sair\n");
+        int opcao = sc.nextInt();
+
+        switch(opcao){
+            case 1:
+                System.out.print("\033[H\033[2J");
+                view.mostrarAluno(view.criarAluno());
+                sc.nextLine();
+                System.out.println("\naperte Enter para continuar!\n");
+                sc.nextLine();
+            break;
+
+            case 0:
+                System.out.println("Adeus!\n");
+                i = 1;
+            break;
+
+            default:
+                System.out.println("\nescolha uma opcao!");
+            break;
+        }
+    }
+}
+
 public void mostrarAluno(Aluno aluno){
     System.out.print("\n-------------------------------------------------------");
     System.out.printf("\nNome: %s", aluno.getNome());
@@ -15,13 +45,13 @@ public void mostrarAluno(Aluno aluno){
     System.out.print("\n-------------------------------------------------------");
 }
 public Aluno criarAluno(){
-    System.out.print("Digite o nome do aluno:");
+    System.out.print("Digite o nome do aluno:\n");
     String nome = sc.next();
 
-    System.out.print("\nDigite a idade do Aluno:");
+    System.out.print("\nDigite a idade do Aluno:\n");
     int idade = sc.nextInt();
     
-    System.out.print("\nDigite o Ra do Aluno:");
+    System.out.print("\nDigite o Ra do Aluno:\n");
     int numero = sc.nextInt();
 
     LocalDate data = LocalDate.now();
