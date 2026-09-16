@@ -27,6 +27,8 @@ public void menu(){
                 break;
             case 3:
                 excluirAluno();
+                System.out.println("\npressione enter para continuar\n");
+                sc.next();
                 break;
             case 4:
                 consultarTodos();
@@ -65,7 +67,7 @@ public void excluirAluno(){
     if(aluno == null){
         System.out.println("tal aluno nao existe\n");
     }else{
-        System.out.println("Aluno " + aluno.getNome() + " foi excluido\n");
+        System.out.println("Aluno " + aluno.getNome() + " do RA: " + aluno.getRa().getNumero() + " foi excluido\n");
         ctrl.excluirAluno(ra);
     }
 }

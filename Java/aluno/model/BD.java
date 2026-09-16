@@ -9,7 +9,15 @@ public class BD {
     }
 
     public void excluir(int ra){
-        bd.remove(ra);
+        Aluno a = null;
+        for(Aluno aluno : bd){
+            if(aluno.getRa().getNumero() == ra){
+                a = aluno;
+                int index = bd.indexOf(a);
+                bd.remove(index);
+                break;
+            }
+        }
     }
 
     public Aluno consultarRA(int ra){
